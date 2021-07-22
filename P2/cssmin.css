@@ -1,0 +1,16 @@
+    /* ajout de la police Raleway */
+    
+    @font-face {
+        font-family: 'ralewayregular';
+        src: url('font/raleway-regular.ttf');
+    }
+    
+    @font-face {
+        font-family: 'ralewaybold';
+        src: url('font/Raleway-Bold.ttf');
+    }
+    
+    @font-face {
+        font-family: 'ralewayblack';
+        src: url('font/Raleway-Black.ttf');
+    }

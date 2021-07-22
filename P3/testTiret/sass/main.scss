@@ -1,0 +1,20 @@
+p{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    color:red;
+    background:yellow;
+    width: 50px;
+    font-size: 1rem;
+    padding: 0;
+    &::before{
+        position: absolute;
+        display: inline-block;
+        top:15px;
+        left:15px;
+        content: " ";
+        width: 1rem;
+        height: 5px;
+        background: teal;
+    }
+}

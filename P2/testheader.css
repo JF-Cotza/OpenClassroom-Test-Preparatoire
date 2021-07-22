@@ -1,0 +1,271 @@
+                    /* ajout de la font Raleway */
+                    
+                    @font-face {
+                        font-family: 'ralewayregular';
+                        src: url('font/raleway-regular.ttf');
+                    }
+                    
+                    @font-face {
+                        font-family: 'ralewaybold';
+                        src: url('font/Raleway-Bold.ttf');
+                    }
+                    
+                    @font-face {
+                        font-family: 'ralewayblack';
+                        src: url('font/Raleway-Black.ttf');
+                    }
+                    /**************** Général: commun à tous **********************/
+                    
+                    body {
+                        background-color: white;
+                        font-family: 'ralewayregular';
+                    }
+                    
+                    h1 {
+                        font-family: 'ralewaybold';
+                        font-size: 1.33rem;
+                        margin: 0;
+                    }
+                    
+                    h2 {
+                        font-family: 'ralewaybold';
+                        font-size: 1.1rem;
+                    }
+                    
+                    p {
+                        margin: 0;
+                        font-size: 1rem;
+                    }
+                    
+                    a {
+                        text-decoration: none;
+                    }
+                    
+                    .grey {
+                        /* pour test */
+                        background-color: rgba(0, 255, 0, .5);
+                        /* background-color: #F2F2F2;*/
+                    }
+                    /******************** header *****************/
+                    
+                    header {
+                        width: 100%;
+                    }
+                    
+                    nav {
+                        height: 132px;
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: flex-end;
+                        text-align: center;
+                        /*pour test */
+                        background-color: rgba(255, 0, 0, .5);
+                    }
+                    
+                    #rightlinks {
+                        /*le bloc des liens hebergements/activités/s'inscrire */
+                        width: 150%;
+                        display: flex;
+                        flex-wrap: wrap-reverse;
+                        /*pour mettre s'inscrire au dessus*/
+                        justify-content: flex-end;
+                        /*pour mettre s'inscrire à droite*/
+                    }
+                    
+                    #rightlinks a {
+                        width: 50%;
+                        height: auto;
+                        font-family: 'ralewaybold';
+                        display: inline-block;
+                        color: #0065FC;
+                        padding-bottom: 17px;
+                        padding-top: 17px;
+                    }
+                    
+                    #rightlinks a:hover {
+                        color: black;
+                    }
+                    
+                    #connectlink {
+                        text-align: right;
+                        align-self: self-end;
+                    }
+                    /************** main *****************/
+                    
+                    #headmain {
+                        margin-top: 0px;
+                        /* pour test */
+                        background: rgba(0, 0, 255, .5);
+                    }
+                    
+                    #searcharea i {
+                        width: 12px;
+                        padding-top: 17px;
+                        padding-bottom: 17px;
+                        padding-left: 21px;
+                        padding-right: 21px;
+                        border-radius: 15px 0 0 15px;
+                    }
+                    
+                    #searcharea input[type='search'] {
+                        padding-top: 17px;
+                        padding-bottom: 17px;
+                        border-collapse: collapse;
+                        border-style: none;
+                        margin-left: auto;
+                        margin-right: auto;
+                        /*pour test*/
+                        background-color: rgba(255, 0, 0, .5);
+                    }
+                    /********** footer *****************/
+                    
+                    footer {
+                        display: flex;
+                        flex-direction: column;
+                        font-family: 'ralewayregular';
+                    }
+                    
+                    footer li {
+                        list-style: none;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        font-size: 1rem;
+                    }
+                    
+                    footer a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                    /*************** media queries ****************/
+                    
+                    @media screen and (max-width: 767px) {
+                        body {
+                            /*pour test */
+                            background-image: url('Maquettes/iPhone\ 8\ -\ 1.png');
+                        }
+                        /* header media queries max-767*/
+                        #logo {
+                            position: absolute;
+                            top: 29px;
+                            width: 50%;
+                        }
+                        #logo img {
+                            position: relative;
+                            top: -5px;
+                            left: -33px;
+                        }
+                        #hominglink,
+                        #activitylink {
+                            border-bottom: 3px solid #0065FC;
+                        }
+                        #hominglink:hover,
+                        #activitylink:hover {
+                            border-bottom: 3px solid #DEEBFF;
+                        }
+                        /*main media queries max-767*/
+                        main {
+                            height: 3925px;
+                        }
+                        #headmain {
+                            margin-left: .7rem;
+                            margin-right: .7rem;
+                        }
+                        #headmain h1 {
+                            margin-top: 25px;
+                            margin-bottom: 12px;
+                        }
+                        #headmain p {
+                            margin-bottom: 13px;
+                        }
+                        #searcharea input[type='search'] {
+                            margin-top: 23px;
+                        }
+                        /* footer media queries */
+                        footer ul {
+                            position: relative;
+                            top: 15px;
+                            left: -20px;
+                            width: 100%;
+                        }
+                    }
+                    
+                    @media screen and (min-width: 768px) {
+                        body {
+                            /* pour test */
+                            background-image: url('Maquettes/Desktop\ -\ 1.png');
+                        }
+                        /* header media queries*/
+                        nav {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        nav div {
+                            display: inline-block;
+                        }
+                        #logo {
+                            position: unset;
+                            /*suppression de la propriété position */
+                            width: 150px;
+                            height: 131px;
+                            /*ex:131*/
+                        }
+                        #logo img {
+                            position: relative;
+                            left: 16px;
+                            top: 33px;
+                        }
+                        #rightlinks {
+                            /*le bloc des liens hebergements/activités/s'inscrire */
+                            min-width: fit-content;
+                            width: 33%;
+                            display: flex;
+                            flex-wrap: nowrap;
+                        }
+                        #rightlinks a {
+                            min-width: 150px;
+                            padding-top: 35px;
+                            padding-bottom: 65px;
+                            /*ex:65*/
+                        }
+                        #hominglink,
+                        #activitylink {
+                            border-top: 3px solid #0065FC;
+                        }
+                        #hominglink:hover,
+                        #activitylink:hover {
+                            border-top: 3px solid #DEEBFF;
+                        }
+                        #connectlink {
+                            text-align: left;
+                            text-indent: 25px;
+                        }
+                        /********************************************************************/
+                        /* main media queries */
+                        main {
+                            height: 1520px;
+                        }
+                        #headmain {
+                            text-indent: 3rem;
+                        }
+                        #searcharea input[type='search'] {
+                            margin-top: 14px;
+                        }
+                        /********************************************************************/
+                        /* footer media queries */
+                        footer {
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        footer ul {
+                            position: relative;
+                            text-align: left;
+                            top: 20px;
+                            width: 35%;
+                            margin-right: 10%;
+                        }
+                        footer li {
+                            /*pour les test */
+                            background-color: rgba(255, 0, 0, .5);
+                        }
+                    }

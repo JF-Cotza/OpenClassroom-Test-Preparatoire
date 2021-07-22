@@ -1,0 +1,540 @@
+/* ajout de la police Raleway */
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('font/raleway-regular.ttf');
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('font/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'ralewayblack';
+    src: url('font/Raleway-Black.ttf');
+}
+
+
+/**************** Général: commun à tous **********************/
+
+body {
+    background-color: white;
+    font-family: 'ralewayregular';
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'ralewaybold';
+}
+
+#populartitle span {
+    font-size: 1.33rem;
+    margin-right: 0.7rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grey {
+    background-color: #F2F2F2;
+}
+
+
+/******************** header ok *****************/
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    text-align: center;
+}
+
+#rightlinks {
+    /*le bloc des liens hebergements/activités/s'inscrire */
+    width: 150%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /*pour mettre s'inscrire au dessus*/
+    justify-content: flex-end;
+    /*pour mettre s'inscrire à droite*/
+}
+
+#rightlinks a {
+    width: 50%;
+    height: auto;
+    font-family: 'ralewaybold';
+    display: inline-block;
+    color: #0065FC;
+    padding-bottom: 17px;
+    padding-top: 17px;
+}
+
+#rightlinks a:hover {
+    color: black;
+}
+
+#connectlink {
+    text-align: right;
+    align-self: self-end;
+}
+
+
+/************** main *****************/
+
+#headmain {
+    margin-top: 0px;
+    /* pour test */
+    background: rgba(0, 0, 255, .5);
+}
+
+#searcharea {
+    max-width: 22rem;
+}
+
+#searcharea>i {
+    width: 12px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 1.3rem;
+    padding-right: 1.2rem;
+    border-radius: 15px 0 0 15px;
+    /*pour test background color:#0065FC*/
+    background-color: red;
+}
+
+#searcharea>input[type='search'] {
+    font-family: 'ralewaybold';
+    font-size: 1.15rem;
+    text-align: left;
+    text-indent: 1rem;
+    padding-top: 10.4px;
+    padding-bottom: 13.2px;
+    /*border-collapse: collapse;*/
+    border: none;
+    /*on supprime les bordures par défaut */
+    border-top: 3px solid#F2F2F2;
+    border-bottom: 3px solid #F2F2F2;
+    /*pour test*/
+    background-color: green;
+}
+
+#searchbutton {
+    width: fit-content;
+    border: none;
+    /*background-color: #0065FC;*/
+    color: #DEEBFF;
+    /*pour test*/
+    background-color: purple;
+}
+
+#filterarea {
+    margin-top: 35px;
+    margin-left: .2rem;
+    margin-right: .2rem;
+    margin-bottom: 74px;
+    /*espace avec + populaires */
+}
+
+#filterarea h2 {
+    margin-bottom: 16px;
+}
+
+#filterform {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#filterform label {
+    font-family: 'ralewaybold';
+    background-color: teal;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 2.4rem;
+    padding-right: .8rem;
+    margin-bottom: 13px;
+    margin-right: .7rem;
+    border: 3px solid #F2F2F2;
+    border-radius: 25px;
+    /* pour les test */
+    opacity: 50%;
+}
+
+#info::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    opacity: 50%;
+    content: "\f05a";
+    font-size: 1.5rem;
+    padding-right: 0.25rem;
+}
+
+#flex {
+    display: flex;
+}
+
+
+/* aside plus populaires */
+
+#populararea {
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+#populartitle {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#populartitle span {
+    color: black;
+    padding-top: 15px;
+    height: 24.8px;
+}
+
+#popularaera a,
+#homingplaces a,
+#activityplaces a {
+    width: 20.3rem;
+    border-radius: 15px;
+    /* pour test */
+    border: 6px solid white;
+    margin-bottom: 2px;
+}
+
+#popularaera article {
+    display: flex;
+}
+
+#popularlinks a {
+    background-size: contain;
+    display: inline-block;
+}
+
+#popularaera article {
+    justify-content: flex-end;
+}
+
+#popularaera article a {
+    width: 60%;
+}
+
+.populardetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.populardetails p {
+    height: 20px;
+    font-size: .8rem;
+}
+
+.populardetails p i {
+    font-size: .7rem;
+    font-weight: 900;
+}
+
+
+/********** footer *****************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer li {
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#popularaera a {
+    height: 100px;
+}
+
+aside {
+    margin-bottom: 80px;
+}
+
+
+/* Section hébergements */
+
+
+/************************************** 767 ***********************************/
+
+@media screen and (max-width: 767px) {
+    body {
+        background-image: url('Maquettes/iPhone\ 8\ -\ 1.png');
+    }
+    /* header media queries max-767 ok*/
+    header {
+        margin-bottom: 32px;
+    }
+    nav {
+        height: 132px;
+    }
+    #logo {
+        position: absolute;
+        top: 29px;
+        width: 50%;
+    }
+    #logo img {
+        position: relative;
+        top: -5px;
+        left: -33px;
+    }
+    #hominglink,
+    #activitylink {
+        border-bottom: 3px solid #0065FC;
+    }
+    #hominglink:hover,
+    #activitylink:hover {
+        border-bottom: 3px solid #DEEBFF;
+    }
+    /*main media queries max-767*/
+    main {
+        height: 3900px;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+    #headmain h1 {
+        margin-bottom: 15px;
+    }
+    #headmain p {
+        margin-bottom: 13px;
+    }
+    #searcharea {
+        margin-top: 33px;
+        position: relative;
+    }
+    #searcharea>input[type='search'] {
+        width: 16rem;
+        z-index: 1;
+    }
+    #searchbutton {
+        z-index: 2;
+        width: fit-content;
+        height: 10px;
+        /*pour pouvoir le positionner au-dessus de l'input */
+        padding-top: 15.1px;
+        padding-bottom: 15.1px;
+        padding-left: 17px;
+        padding-right: 17px;
+        border-radius: 15px;
+        text-align: center;
+    }
+    #searchbutton .large {
+        display: none;
+    }
+    #searchbutton .small {
+        background-color: yellow;
+    }
+    .populardetails {
+        width: 60%;
+    }
+    #flex {
+        flex-direction: column;
+    }
+    /* footer media queries -767*/
+    footer {
+        margin-left: .7rem;
+        margin-right: .7rem;
+        padding-top: 20px;
+    }
+    footer ul {
+        display: inline-block;
+        width: auto;
+        list-style-position: inside;
+        padding-left: 1rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+}
+
+#popularlinks a:nth-child(1) {
+    background-image: url('images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
+}
+
+#popularlinks a:nth-child(2) {
+    background-image: url('images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
+}
+
+#popularlinks a:nth-child(3) {
+    background-image: url('images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
+}
+
+#homingplaces a:nth-child(1) {
+    background-image: url('images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
+}
+
+#homingplaces a:nth-child(2) {
+    background-image: url('images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+}
+
+#homingplaces a:nth-child(3) {
+    background-image: url('images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg');
+}
+
+#homingplaces a:nth-child(4) {
+    background-image: url('images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
+}
+
+#homingplaces a:nth-child(5) {
+    background-image: url('images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
+}
+
+#homingplaces a:nth-child(6) {
+    background-image: url('images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+}
+
+
+}
+
+/************************** 768 *************************/
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url('Maquettes/Desktop\ -\ 1.png');
+    }
+    /* header media queries + 768 ok*/
+    
+    nav {
+        height: 112px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav div {
+        display: inline-block;
+    }
+    
+    #logo {
+        position: unset;
+        /*suppression de la propriété position */
+        width: 150px;
+        height: 112px;
+        /*ex:131*/
+    }
+    
+    #logo img {
+        position: relative;
+        left: 16px;
+        top: 33px;
+    }
+    
+    #rightlinks {
+        /*le bloc des liens hebergements/activités/s'inscrire */
+        min-width: fit-content;
+        width: 33%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    #rightlinks a {
+        min-width: 150px;
+        padding-top: 35px;
+        padding-bottom: 65px;
+        /*ex:65*/
+    }
+    
+    #hominglink,
+    #activitylink {
+        border-top: 3px solid #0065FC;
+    }
+    
+    #hominglink:hover,
+    #activitylink:hover {
+        border-top: 3px solid #DEEBFF;
+    }
+    
+    #connectlink {
+        text-align: left;
+        text-indent: 25px;
+    }
+    /********************************************************************/
+    /* main media queries +768*/
+    
+    main {
+        height: 1520px;
+        margin-left: 3.4rem;
+        margin-right: 3rem;
+    }
+    
+    #headermain h1 {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    
+    #searcharea input[type='search'] {
+        margin-top: 14px;
+        width: 14.5rem;
+    }
+    
+    #searcharea {
+        display: flex;
+    }
+    
+    #searchbutton {
+        text-indent: .45rem;
+        width: 8.4rem;
+        border-radius: 0 15px 15px 0;
+    }
+    
+    #searchbutton .small {
+        display: none;
+    }
+    
+    .large {
+        font-family: 'ralewaybold';
+        font-size: 1.25rem;
+        padding-top: 10px;
+        padding-bottom: 16px;
+        padding-left: 0.6rem;
+        padding-right: .6rem;
+    }
+    
+    #flex {
+        flex-direction: row;
+    }
+    /* footer media queries +768*/
+    
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 35px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    footer ul {
+        flex: 1;
+        /* les 3 éléments ont la même taille*/
+        text-align: left;
+        margin: 20px 0 0 0;
+    }
+    
+    footer li {
+        padding-left: .6rem;
+        /*pour les test */
+    }
+}

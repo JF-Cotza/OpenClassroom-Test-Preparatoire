@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    overflow: auto;
+}
+
+nav {
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+#right_links {
+    margin: 0;
+    padding: 0;
+    /*le bloc des liens hebergements/activités/s'inscrire */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /*pour mettre s'inscrire au dessus*/
+    justify-content: flex-end;
+    /*pour mettre s'inscrire à droite*/
+}
+
+#right_links li {
+    display: inline-block;
+    width: 50%;
+    /*pour éliminer le débordement */
+    font-family: 'ralewaybold';
+}
+
+#right_links a {
+    display: flex;
+    justify-content: center;
+}
+
+#right_links a {
+    color: #0065FC;
+}
+
+#right_links a:visited {
+    color: black;
+}
+
+ul li:nth-child(1) {
+    background-color: brown;
+}
+
+ul li:nth-child(2) {
+    background-color: teal;
+}
+
+ul li:nth-child(3) {
+    background-color: yellow;
+}
+
+ul li:nth-child(4) {
+    background-color: Blue;
+}

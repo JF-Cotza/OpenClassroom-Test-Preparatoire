@@ -1,0 +1,86 @@
+            /* ajout de la font Raleway */
+            
+            @font-face {
+                font-family: 'ralewayregular';
+                src: url('font/raleway-regular.ttf');
+            }
+            
+            @font-face {
+                font-family: 'ralewaybold';
+                src: url('font/Raleway-Bold.ttf');
+            }
+            
+            @font-face {
+                font-family: 'ralewayblack';
+                src: url('font/Raleway-Black.ttf');
+            }
+            /***************** test ****************/
+            /*            body {
+                background-image: url('Maquettes/Footer-iPhone\ 8.png');
+            }
+*/
+            
+            h2 {
+                font-family: 'ralewaybold';
+                font-size: 1.1rem;
+            }
+            
+            .grey {
+                background-color: rgba(0, 255, 0, .5);
+            }
+            
+            footer {
+                padding-top: 26px;
+            }
+            
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .footer div {
+                border: 1px solid red;
+                height: fit-content;
+                width: 100%;
+            }
+            
+            .footer ul {
+                padding-left: 20px;
+                font-family: 'ralewayregular';
+            }
+            
+            .footer li {
+                list-style: none;
+                margin: 15px 0;
+                font-size: 1rem;
+            }
+            
+            .footer a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            @media screen and (min-width: 768px) {
+                /*                body {
+                    background-image: url('Maquettes/Footer-Desktop.png');
+                }*/
+                .footer {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .footer div {
+                    width: 25%;
+                    padding-top: 10px;
+                }
+                #about {
+                    text-align: left;
+                    padding-left: 25px;
+                }
+                #staying {
+                    text-align: center;
+                }
+                #help {
+                    text-align: right;
+                    padding-right: 50px;
+                }
+            }

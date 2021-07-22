@@ -1,0 +1,193 @@
+/*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../../sass/base/fonts/Roboto/Roboto-Regular.ttf') format('ttf'),
+		 url('../../sass/base/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../../sass/base/fonts/Roboto/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../../sass/base/fonts/Shrikhand/Shrikhand-Regular.ttf') format('ttf'),
+		 url('../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* note : attention aux liens! lors de la compil, les chemins partent du répertoire css... */
+
+
+/************* variable **************/
+/* color */
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-third:#99E2D0;
+$color-modify:(dark:100%,light:100%,smooth:10%);
+
+/* font */
+$font-text:'robotoregular'; /* texte du site */
+$font-main_info:'shrikhandregular'; /* nom des restaurants sur les pages dédiées */
+$font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
+
+/*pour les margin et les padding verticaux (exprimé en px)*/
+$headpadding:10px;
+$buttonpadding:13px;
+$padding:(sixhead:$headpadding*6,fivehead:$headpadding*5,fourhead:$headpadding*4,threefive:$headpadding*3.5,threehead:$headpadding * 3,twohalf:$headpadding*2.5,dubble-head:$headpadding*2,head:$headpadding,button:$buttonpadding,quarter: div($buttonpadding,4));
+/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
+
+/* border radius */
+$border-radius:(round:50%,button:25px,menu:40px, standard:15px,minus:2px);
+
+/**/
+/*breakpoints*/
+$breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992px);
+
+
+$time:1s;
+
+/* fonctions */
+@function color-modify($modifier,$color,$value){
+	@if ($modifier=='dark'){
+		@return darken($color,$value);
+	}
+	@if ($modifier=='light'){
+		@return lighten($color,$value);
+	}
+}
+
+/*la page */
+*{
+    font-family: $font-text;
+    margin: 0;
+    padding: 0;
+    color:black
+}
+
+body{
+    width: 100%;    
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+li:nth-child(1){
+.favori{
+    border:none;
+    input{
+            display:none;
+            &+label{
+                & .checked{
+                    display: none;
+                }
+                & .unchecked{
+                    display: inline-block;
+                    transform: scale(1) ;
+                    color:darken($color: $color-primary, $amount: 50%);
+                }
+            }
+            &:checked+label{
+                & .checked{
+                    display: inline-block;
+                    transform: scale(1);
+                    color:$color-primary;
+                }
+                & .unchecked{
+                    display: none;
+                }
+            }
+            &:checked+label{
+                 .checked:hover
+                {
+                    display: inline-block;
+                    background-color: red;
+                    animation: hoverscale 4*$time ;
+                }
+                .unchecked:hover{
+                    display: inline-block;
+                    background-color: blue;
+                    transform: scale(0);
+                }
+            }
+            &+label{
+                 .checked:hover
+                {
+                    display: inline-block;
+                    //background-color: red;
+                    transform: scale(0);
+                }
+                .unchecked:hover{
+                    display: inline-block;
+                  //cd  background-color: blue;
+                    animation: hoverscale 4*$time;
+                }
+            }
+        }
+    }
+}
+
+ul{
+    margin-top: map-get($map: $padding, $key: dubble-head);
+    list-style: none; 
+/*fiche des restaurants */
+
+        & .restaurant{
+        background-image: url('../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+        background-position: 90%;
+    }
+}
+
+$time:4s;
+
+li:nth-child(2){
+    .favori{
+        input:hover+label{
+            & .unchecked{
+                transform-origin: bottom;
+                animation: testhover $time ease-in-out both;
+            }
+            & .checked{
+                transform-origin: bottom;
+                animation: testhover $time ease-in-out both;
+                animation-direction: reverse;
+            }
+        }
+    }
+}
+/*
+
+
+@keyframes hoverscale {
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(.5);
+    }
+    50%{
+        transform: scale(4);
+    }
+    75%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+*/
+@keyframes testhover {
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(0);
+        opacity:0;
+    }
+}

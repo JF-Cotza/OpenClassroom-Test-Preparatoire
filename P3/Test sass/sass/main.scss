@@ -1,0 +1,80 @@
+$test-color:black;
+$font-color:white;
+h1 {
+    background: $test-color;
+    color: $font-color;
+}
+
+h2 {
+    color: $test-color;
+    background: $font-color;
+}
+
+$palettes: black white yellow;
+$backgrounds: blue yellow white;
+$borders: 1rem 2rem 3rem;
+
+@each $state, $palette in $palettes{
+    @each $value, $background in $backgrounds{
+        @each $size, $border in $borders{
+            p{
+                color:$state;
+                background: $value;
+                border:$size solid $state;
+            }
+        }
+    }
+}
+/*-> réalise 3*3*3 blocs p */
+@each $state, $palette in $palettes{
+    @each $value, $background in $backgrounds{
+        span{
+            color:$state;
+            background: $value;
+                @each $size, $border in $borders{
+                                border:$size solid $state;
+                                                }
+            }
+                                            }
+                                        }
+/*-> répéte la ligne border 3* dans 3*3 span */
+
+$palettes-test:(active:blue, visited: red, hover:grey);
+/* $palettes-test:($sort:$test) */
+
+a{
+@each $sort, $test in $palettes-test{ 
+        &:#{$sort}{
+        background: $test;
+    }
+}
+}
+
+$palettes-test1:(active:blue yellow green, visited:red purple black, hover: grey black yellow);
+/* $palettes-test:($sort:$test) */
+
+button{
+@each $sort, $test in $palettes-test{ 
+        &:#{$sort}{
+        background: $test;
+        color: $test;
+        border: 1rem solid $test;
+        }
+    }
+}
+/* ne prend que la première valeur comment faire pour prendre les suivantes, pas avec map, ni nth dans cette config).
+/*-> solution du problème précédent : séparer les palettes spécifiques */
+$palette-hover:(grey, black, yellow);
+$palette-visited:(red, purple, black);
+$palette-active:(blue, yellow, green);
+$palettes-test2:(active:$palette-active, visited:$palette-visited, hover:$palette-hover);
+
+.button{
+@each $sort, $test in $palettes-test2{ 
+        &:#{$sort}{
+        background: nth($list: $test, $n:1 );
+        color: nth($list: $test, $n:2 );
+        border: 1rem solid nth($list: $test, $n:3 );;
+        }
+    }
+}

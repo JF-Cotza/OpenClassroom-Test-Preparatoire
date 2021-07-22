@@ -1,0 +1,51 @@
+            p {
+                margin: 0;
+                font-size: 1rem;
+            }
+            
+            .gry {
+                /* pour test */
+                background-color: rgba(0, 255, 0, .5);
+            }
+            
+            section {
+                margin-left: .7rem;
+            }
+            
+            #homingplaces a {
+                background-size: contain;
+                display: inline-block;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            
+            .homingdetails {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                /* background-color: white; */
+                /*pour test */
+                background-color: red;
+            }
+            /* section activité*/
+            
+            .activitydetails {
+                background-color: green;
+            }
+            
+            #activityplaces a {
+                background-size: contain;
+                display: inline-block;
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                background-color: crimson;
+            }
+            /*************** media queries ****************/
+            
+            @media screen and (max-width: 767px) {
+                /* main -767 */
+            }

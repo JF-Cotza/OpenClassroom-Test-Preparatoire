@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
+@font-face {
+  font-family: "robotoregular";
+  src: url("../../sass/base/fonts/Roboto/Roboto-Regular.ttf") format("ttf"), url("../../sass/base/fonts/Roboto/roboto-regular-webfont.woff2") format("woff2"), url("../../sass/base/fonts/Roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../../sass/base/fonts/Shrikhand/Shrikhand-Regular.ttf") format("ttf"), url("../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* note : attention aux liens! lors de la compil, les chemins partent du répertoire css... */
+/************* variable **************/
+/* color */
+/* font */
+/* texte du site */
+/* nom des restaurants sur les pages dédiées */
+/*pour les margin et les padding verticaux (exprimé en px)*/
+/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
+/* border radius */
+/**/
+/*breakpoints*/
+/* fonctions */
+/*la page */
+* {
+  font-family: "robotoregular";
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li:nth-child(1) .favori {
+  border: none;
+}
+li:nth-child(1) .favori input {
+  display: none;
+}
+li:nth-child(1) .favori input + label .checked {
+  display: none;
+}
+li:nth-child(1) .favori input + label .unchecked {
+  display: inline-block;
+  transform: scale(1);
+  color: #18092a;
+}
+li:nth-child(1) .favori input:checked + label .checked {
+  display: inline-block;
+  transform: scale(1);
+  color: #9356DC;
+}
+li:nth-child(1) .favori input:checked + label .unchecked {
+  display: none;
+}
+li:nth-child(1) .favori input:checked + label .checked:hover {
+  display: inline-block;
+  background-color: red;
+  animation: hoverscale 4s;
+}
+li:nth-child(1) .favori input:checked + label .unchecked:hover {
+  display: inline-block;
+  background-color: blue;
+  transform: scale(0);
+}
+li:nth-child(1) .favori input + label .checked:hover {
+  display: inline-block;
+  transform: scale(0);
+}
+li:nth-child(1) .favori input + label .unchecked:hover {
+  display: inline-block;
+  animation: hoverscale 4s;
+}
+
+ul {
+  margin-top: 20px;
+  list-style: none;
+  /*fiche des restaurants */
+}
+ul .restaurant {
+  background-image: url("../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: 90%;
+}
+
+li:nth-child(2) .favori input:hover + label .unchecked {
+  transform-origin: bottom;
+  animation: testhover 4s ease-in-out both;
+}
+li:nth-child(2) .favori input:hover + label .checked {
+  transform-origin: bottom;
+  animation: testhover 4s ease-in-out both;
+  animation-direction: reverse;
+}
+
+/*
+
+
+@keyframes hoverscale {
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(.5);
+    }
+    50%{
+        transform: scale(4);
+    }
+    75%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+*/
+@keyframes testhover {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

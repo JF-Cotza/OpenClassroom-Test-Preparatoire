@@ -1,0 +1,292 @@
+    /* ajout de la font Raleway */
+    
+    @font-face {
+        font-family: 'ralewayregular';
+        src: url('font/raleway-regular.ttf');
+    }
+    
+    @font-face {
+        font-family: 'ralewaybold';
+        src: url('font/Raleway-Bold.ttf');
+    }
+    
+    @font-face {
+        font-family: 'ralewayblack';
+        src: url('font/Raleway-Black.ttf');
+    }
+    /**************** Général  **********************/
+    
+    body {
+        background-color: white;
+        font-family: 'ralewayregular';
+    }
+    
+    .page {
+        background-color: white;
+        background-image: url('images/iPhone\ 8\ -\ 1.png');
+    }
+    
+    h1 {
+        font-family: 'ralewaybold';
+        font-size: 1.4rem;
+    }
+    
+    h2 {
+        font-family: 'ralewaybold';
+        font-size: 1.2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    /******************** header *****************/
+    
+    nav {
+        height: 132px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        /*positionnement en bas des liens -> align-items:flex-end*/
+        align-items: flex-end;
+        text-align: center;
+    }
+    
+    nav a {
+        width: 50%;
+        height: auto;
+        font-family: 'ralewaybold';
+        display: inline-block;
+        color: #0065FC;
+        border-bottom: 3px solid #0065FC;
+        padding-bottom: 17px;
+        padding-top: 17px;
+    }
+    
+    nav a:hover {
+        height: auto;
+        font-family: 'ralewaybold';
+        display: inline-block;
+        color: black;
+        flex: 1;
+        border-bottom: 3px solid #DEEBFF;
+    }
+    
+    #connect {
+        position: absolute;
+        top: 30px;
+        /*sans padding de 17:47px;*/
+        right: -45px;
+    }
+    
+    #logo {
+        position: absolute;
+        top: 15px;
+        /* sans padding de 17: 32px;*/
+        left: -18px;
+    }
+    
+    #logo,
+    #connect {
+        border-bottom: none;
+    }
+    /************* main *******************/
+    
+    .headmain {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .headmain h1 {
+        margin-top: 30px;
+    }
+    /*********** zone de recherche ************/
+    
+    #searcharea {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        border-collapse: collapse;
+        border-style: none;
+        margin: auto;
+    }
+    
+    #searcharea button {
+        /*all: unset; désactive aussi le fontawsome */
+        border-style: none;
+        color: #DEEBFF;
+        background-color: #0065FC;
+        border-radius: 10px;
+    }
+    
+    #searcharea .fas {
+        font-size: 1.1rem;
+        margin: auto;
+        padding: 16px 16px;
+    }
+    
+    #searcharea i {
+        color: black;
+        border-radius: 10px 0 0 10px;
+        background-color: #DEEBFF;
+    }
+    
+    #searcharea input {
+        padding: 14px 0;
+        font-size: 1.1rem;
+        text-align: center;
+        width: 65%;
+        font-weight: bold;
+    }
+    /******************* zone de filtre *************/
+    
+    #filterarea {
+        /* toute la zone proprement dite */
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #filterarea h2 {
+        margin: 10px 5px -8px 0px;
+    }
+    
+    .filter {
+        /*input proprement dit */
+        display: none;
+        /*pour masquer les checkboxs*/
+    }
+    
+    .filter {
+        font-family: 'ralewaybold';
+        width: 25%;
+        height: 20px;
+        padding: 30px 0px 30px 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    
+    .filter:hover {
+        background-color: red;
+    }
+    
+    .filterbox::before {
+        /* pours les fontawesome des checkboxs */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: black;
+        /*margin: 0 0.5rem;*/
+        margin-right: 10px;
+        /*background-color: #DEEBFF;*/
+        background-color: teal;
+        padding: 14px 12px;
+        border-radius: 26px;
+        position: relative;
+        left: -15px;
+    }
+    
+    .filterbox {
+        /* label autour input */
+        display: inline-block;
+        border: 3px solid #F2F2F2;
+        padding: 14px 0 14px 0;
+        border-radius: 0 26px 26px 0;
+        margin: 5px 10px;
+    }
+    
+    .cheep::before {
+        content: '\f53a';
+    }
+    
+    .family::before {
+        content: '\f1ae';
+    }
+    
+    .romantic::before {
+        content: '\f004';
+    }
+    
+    .animals::before {
+        content: '\f6d3';
+    }
+    
+    .filterform {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: auto;
+        align-items: flex-end;
+    }
+    
+    #info .fas {
+        color: #0065FC;
+        font-size: 1.5rem;
+    }
+    
+    #info {
+        margin-top: 8px;
+    }
+    /************ popularaera *************/
+    
+    .grey {
+        /*background-color: #F2F2F2; projet*/
+        background-color: rgba(255, 0, 0, .5);
+    }
+    
+    .afinir {
+        background-color: turquoise;
+    }
+    
+    #popularaera {
+        margin-top: 1rem;
+    }
+    
+    #populartitle {
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #populartitle h1 {
+        margin-left: 1.3rem;
+    }
+    
+    #populartitle i {
+        padding-top: 1.5rem;
+        font-size: 1.4rem;
+    }
+    
+    #popularaera picture img {
+        max-height: 9rem;
+        max-width: 4rem;
+        overflow: hidden;
+        border-radius: 26px 0 0 26px;
+    }
+    /* https://askcodez.com/comment-cacher-une-partie-de-limage.html */
+    
+    #popularaera article {
+        margin-left: 1.2rem;
+        margin-right: 0.4rem;
+        border: 5px solid black;
+        border-radius: 26px;
+        background-color: rgba(0, 255, 0, .5);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* utile :
+bleu foncé : #0065FC
+bleu clair : #DEEBFF
+fond gris : #F2F2F2
+font : Raleway.
+
+Les très petits écrans (< 768 px : pour les écrans dont la largeur est comprise entre 0 px et 768 px)
+- Tablettes (768 px - 991 px)
+- Ordinateurs (992 px - 1199 px)
+- Grands écrans d'ordinateurs et télévisions
+
+*/

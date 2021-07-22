@@ -1,0 +1,293 @@
+@charset "UTF-8";
+h1 {
+  background: black;
+  color: white;
+}
+
+h2 {
+  color: black;
+  background: white;
+}
+
+p {
+  color: black;
+  background: blue;
+  border: 1rem solid black;
+}
+
+p {
+  color: black;
+  background: blue;
+  border: 2rem solid black;
+}
+
+p {
+  color: black;
+  background: blue;
+  border: 3rem solid black;
+}
+
+p {
+  color: black;
+  background: yellow;
+  border: 1rem solid black;
+}
+
+p {
+  color: black;
+  background: yellow;
+  border: 2rem solid black;
+}
+
+p {
+  color: black;
+  background: yellow;
+  border: 3rem solid black;
+}
+
+p {
+  color: black;
+  background: white;
+  border: 1rem solid black;
+}
+
+p {
+  color: black;
+  background: white;
+  border: 2rem solid black;
+}
+
+p {
+  color: black;
+  background: white;
+  border: 3rem solid black;
+}
+
+p {
+  color: white;
+  background: blue;
+  border: 1rem solid white;
+}
+
+p {
+  color: white;
+  background: blue;
+  border: 2rem solid white;
+}
+
+p {
+  color: white;
+  background: blue;
+  border: 3rem solid white;
+}
+
+p {
+  color: white;
+  background: yellow;
+  border: 1rem solid white;
+}
+
+p {
+  color: white;
+  background: yellow;
+  border: 2rem solid white;
+}
+
+p {
+  color: white;
+  background: yellow;
+  border: 3rem solid white;
+}
+
+p {
+  color: white;
+  background: white;
+  border: 1rem solid white;
+}
+
+p {
+  color: white;
+  background: white;
+  border: 2rem solid white;
+}
+
+p {
+  color: white;
+  background: white;
+  border: 3rem solid white;
+}
+
+p {
+  color: yellow;
+  background: blue;
+  border: 1rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: blue;
+  border: 2rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: blue;
+  border: 3rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: yellow;
+  border: 1rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: yellow;
+  border: 2rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: yellow;
+  border: 3rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: white;
+  border: 1rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: white;
+  border: 2rem solid yellow;
+}
+
+p {
+  color: yellow;
+  background: white;
+  border: 3rem solid yellow;
+}
+
+/*réalise 3*3*3 blocs p */
+span {
+  color: black;
+  background: blue;
+  border: 1rem solid black;
+  border: 2rem solid black;
+  border: 3rem solid black;
+}
+
+span {
+  color: black;
+  background: yellow;
+  border: 1rem solid black;
+  border: 2rem solid black;
+  border: 3rem solid black;
+}
+
+span {
+  color: black;
+  background: white;
+  border: 1rem solid black;
+  border: 2rem solid black;
+  border: 3rem solid black;
+}
+
+span {
+  color: white;
+  background: blue;
+  border: 1rem solid white;
+  border: 2rem solid white;
+  border: 3rem solid white;
+}
+
+span {
+  color: white;
+  background: yellow;
+  border: 1rem solid white;
+  border: 2rem solid white;
+  border: 3rem solid white;
+}
+
+span {
+  color: white;
+  background: white;
+  border: 1rem solid white;
+  border: 2rem solid white;
+  border: 3rem solid white;
+}
+
+span {
+  color: yellow;
+  background: blue;
+  border: 1rem solid yellow;
+  border: 2rem solid yellow;
+  border: 3rem solid yellow;
+}
+
+span {
+  color: yellow;
+  background: yellow;
+  border: 1rem solid yellow;
+  border: 2rem solid yellow;
+  border: 3rem solid yellow;
+}
+
+span {
+  color: yellow;
+  background: white;
+  border: 1rem solid yellow;
+  border: 2rem solid yellow;
+  border: 3rem solid yellow;
+}
+
+/*répéte la ligne border 3* dans 3*3 span */
+/* $palettes-test:($sort:$test) */
+a:active {
+  background: blue;
+}
+a:visited {
+  background: red;
+}
+a:hover {
+  background: grey;
+}
+
+/* $palettes-test:($sort:$test) */
+button:active {
+  background: blue;
+  color: blue;
+  border: 1rem solid blue;
+}
+button:visited {
+  background: red;
+  color: red;
+  border: 1rem solid red;
+}
+button:hover {
+  background: grey;
+  color: grey;
+  border: 1rem solid grey;
+}
+
+/* */
+.button:active {
+  background: blue;
+  color: yellow;
+  border: 1rem solid green;
+}
+.button:visited {
+  background: red;
+  color: purple;
+  border: 1rem solid black;
+}
+.button:hover {
+  background: grey;
+  color: black;
+  border: 1rem solid yellow;
+}
+
+/*# sourceMappingURL=style.css.map */
