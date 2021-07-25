@@ -1,0 +1,94 @@
+$hight:10px;
+$color-1:silver;
+$color-2:gold;
+$color-3:black;
+$timeclock:1.5s;
+$repeat:infinite;
+
+
+@mixin point($height,$background) {
+    display: inline-block;
+    width: $height;
+    height:$height;
+    border-radius: 50%;
+    background: $background;
+}
+
+@keyframes clock{
+        from{
+            transform: rotateZ(0);
+        }
+        to{
+            transform: rotateZ(330deg);
+        }    
+}
+
+
+@mixin clocktime {
+    animation: clock $timeclock ease-in-out $repeat both ;
+}
+
+
+@keyframes maldemer{
+        from{
+            transform: rotateX(0) rotateY(0);
+        }
+        to{
+            transform: rotateX(330deg) rotateY(330deg);
+        }
+}
+
+@mixin mal{
+    animation: maldemer $timeclock ease-in-out $repeat both alternate;
+}
+
+@mixin position{
+    position: absolute;
+    top:70px;
+    left: 25px;
+    transform-origin: center;
+    
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boucle{
+    width: 200px;
+    height: 200px;
+    background: $color-3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle{
+        @include mal;   
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid red;
+        @for $j from 1 through  6{
+            .space-#{$j}{
+                transform: rotateZ(30deg*$j);
+                @include position;
+                //border: 1px solid black;
+                .point{
+                    @include point($hight,$color-1);
+                }
+                
+            }
+        .rounding{
+            @include position;
+            @include clocktime;
+            .pointing{
+                @include point($hight,$color-2);
+            }
+            .point{
+                opacity: 0;
+                @include point($hight,$color-1);
+            }
+        }
+        }   
+    }
+}
+

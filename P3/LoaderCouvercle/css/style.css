@@ -1,0 +1,522 @@
+@charset "UTF-8";
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  30%, 35% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  55%, 60% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-30deg);
+  }
+}
+.bloc {
+  line-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 375px) {
+  /*approximativement $top:(2*$height-10*$fontsize/62.5%); en réalité, la hauteur de ligne n'est pas exacte à cause des 'pattes' des p pour commencer. il ya un facteur entre .83 et .89 environ selon les cas par défaut pris .83 ce qui donne pour la troisième valeur :
+  $top: 2*$height-10*$fontsize/(62.5%*.83)
+  ce calcul doit être fait à la main.
+  */
+  .load {
+    width: 120px;
+    height: 60px;
+    position: relative;
+  }
+  .load .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .load .couvercle {
+    transform-origin: bottom left;
+    animation: rotate 3s ease-in-out both;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 2;
+  }
+  .load .couvercle .prise {
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    background: silver;
+    border-radius: 50%;
+  }
+  .load .couvercle .cloche {
+    height: 20px;
+    width: 80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: auto;
+    background: silver;
+  }
+  .load .texte {
+    width: 100%;
+    position: absolute;
+    top: 26px;
+    text-align: center;
+    left: 0;
+  }
+  .load .texte p {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0;
+  }
+  .load .assiette {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+  }
+  .load .assiette .hautplat {
+    width: 120px;
+    height: div(20px, 5);
+    min-height: 2px;
+    margin: auto;
+    background: silver;
+  }
+  .load .assiette .basplat {
+    width: 100px;
+    height: div(20px, 5);
+    min-height: 2px;
+    margin: auto;
+    background: silver;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 795px) {
+  .load {
+    width: 300px;
+    height: 150px;
+    position: relative;
+  }
+  .load .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .load .couvercle {
+    transform-origin: bottom left;
+    animation: rotate 3s ease-in-out both;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 2;
+  }
+  .load .couvercle .prise {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    background: silver;
+    border-radius: 50%;
+  }
+  .load .couvercle .cloche {
+    height: 50px;
+    width: 200px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin: auto;
+    background: silver;
+  }
+  .load .texte {
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    text-align: center;
+    left: 0;
+  }
+  .load .texte p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+  }
+  .load .assiette {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+  }
+  .load .assiette .hautplat {
+    width: 300px;
+    height: div(50px, 5);
+    min-height: 2px;
+    margin: auto;
+    background: silver;
+  }
+  .load .assiette .basplat {
+    width: 250px;
+    height: div(50px, 5);
+    min-height: 2px;
+    margin: auto;
+    background: silver;
+  }
+}
+@media screen and (min-width: 795px) {
+  .load {
+    width: 600px;
+    height: 300px;
+    position: relative;
+  }
+  .load .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .load .couvercle {
+    transform-origin: bottom left;
+    animation: rotate 3s ease-in-out both;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 2;
+  }
+  .load .couvercle .prise {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background: silver;
+    border-radius: 50%;
+  }
+  .load .couvercle .cloche {
+    height: 100px;
+    width: 400px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    margin: auto;
+    background: silver;
+  }
+  .load .texte {
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    text-align: center;
+    left: 0;
+  }
+  .load .texte p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+  .load .assiette {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+  }
+  .load .assiette .hautplat {
+    width: 600px;
+    height: div(100px, 5);
+    min-height: 2px;
+    margin: auto;
+    background: silver;
+  }
+  .load .assiette .basplat {
+    width: 500px;
+    height: div(100px, 5);
+    min-height: 2px;
+    margin: auto;
+    background: silver;
+  }
+}
+@keyframes clock {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(330deg);
+  }
+}
+@keyframes maldemer {
+  from {
+    transform: rotateX(0) rotateY(0);
+  }
+  to {
+    transform: rotateX(330deg) rotateY(330deg);
+  }
+}
+.boucle {
+  width: 200px;
+  height: 200px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boucle .circle {
+  animation: maldemer 1.5s ease-in-out infinite both alternate;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.boucle .circle .space-1 {
+  transform: rotateZ(30deg);
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.boucle .circle .space-1 .point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .rounding {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: clock 1.5s ease-in-out infinite both;
+}
+.boucle .circle .rounding .pointing {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+.boucle .circle .rounding .point {
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .space-2 {
+  transform: rotateZ(60deg);
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.boucle .circle .space-2 .point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .rounding {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: clock 1.5s ease-in-out infinite both;
+}
+.boucle .circle .rounding .pointing {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+.boucle .circle .rounding .point {
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .space-3 {
+  transform: rotateZ(90deg);
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.boucle .circle .space-3 .point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .rounding {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: clock 1.5s ease-in-out infinite both;
+}
+.boucle .circle .rounding .pointing {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+.boucle .circle .rounding .point {
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .space-4 {
+  transform: rotateZ(120deg);
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.boucle .circle .space-4 .point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .rounding {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: clock 1.5s ease-in-out infinite both;
+}
+.boucle .circle .rounding .pointing {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+.boucle .circle .rounding .point {
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .space-5 {
+  transform: rotateZ(150deg);
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.boucle .circle .space-5 .point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .rounding {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: clock 1.5s ease-in-out infinite both;
+}
+.boucle .circle .rounding .pointing {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+.boucle .circle .rounding .point {
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .space-6 {
+  transform: rotateZ(180deg);
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.boucle .circle .space-6 .point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+.boucle .circle .rounding {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform-origin: center;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: clock 1.5s ease-in-out infinite both;
+}
+.boucle .circle .rounding .pointing {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+.boucle .circle .rounding .point {
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+}
+
+/*# sourceMappingURL=style.css.map */
