@@ -171,7 +171,7 @@ p {
   border: 3rem solid yellow;
 }
 
-/*réalise 3*3*3 blocs p */
+/*-> réalise 3*3*3 blocs p */
 span {
   color: black;
   background: blue;
@@ -244,7 +244,7 @@ span {
   border: 3rem solid yellow;
 }
 
-/*répéte la ligne border 3* dans 3*3 span */
+/*-> répéte la ligne border 3* dans 3*3 span */
 /* $palettes-test:($sort:$test) */
 a:active {
   background: blue;
@@ -273,7 +273,8 @@ button:hover {
   border: 1rem solid grey;
 }
 
-/* */
+/* ne prend que la première valeur comment faire pour prendre les suivantes, pas avec map, ni nth dans cette config).
+/*-> solution du problème précédent : séparer les palettes spécifiques */
 .button:active {
   background: blue;
   color: yellow;
