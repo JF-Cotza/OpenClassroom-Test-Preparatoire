@@ -1,0 +1,44 @@
+@charset "UTF-8";
+p {
+  width: 20px;
+  height: 200px;
+  background: #330f55;
+}
+
+/*
+
+
+    background: rgb(calc(255/5), 255/17, 255/3);
+    Deprecation Warning: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+    Recommendation: math.div(255, 3)
+    More info and automated migrator: https://sass-lang.com/d/slash-div
+
+
+      background: rgb(math.div(255, 5), math.div(255, 17), math.div(255,3));
+
+      Error: There is no module with the namespace "math".
+  ╷
+9 │     background: rgb(math.div(255, 5), math.div(255, 17), math.div(255,3));
+  │                     ^^^^^^^^^^^^^^^^
+  ╵
+  sass\main.scss 9:21  root stylesheet
+
+    background: rgb(div(255, 5), div(255, 17), div(255, 3));
+    Error: $red: div(255, 5) is not a number.
+  ╷
+9 │     background: rgb(div(255, 5), div(255, 17), div(255, 3));
+  │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+  sass\main.scss 9:17  root stylesheet
+
+
+    */
+/*p{
+    width:div(100px, 5);
+    background: rgb(calc(255/5), 255/17, 255/3);
+    color:rgb(div($dcc, 5), div(255, 17), div($dcc, $trois));
+
+    -> div($dcc, 5) not a number
+}*/
+
+/*# sourceMappingURL=style.css.map */
