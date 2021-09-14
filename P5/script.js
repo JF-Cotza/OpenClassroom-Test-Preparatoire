@@ -27,7 +27,7 @@ if ("content" in document.createElement("template")) {
         'color': ['bcd', 'efg', 'ghi'],
         'prix': 2000,
         'details': 'details: lorerienfeklevlznbvllvnv jbdkbfkjzbuiegz bfguigbezguug',
-        'id':'1234',
+        '_id':'1234',
         'imageUrl':'###',
         'alt':'produit0'
     },
@@ -36,7 +36,7 @@ if ("content" in document.createElement("template")) {
             'color': ['ijk', 'lmn', 'opq'],
             'prix': 1920,
             'details': 'details: fs;bs,;bsf;benfeklevlznbvllvnv jbdkbfkjzbuiegz bfguigbezguug',
-            'id': '567',
+            '_id': '567',
             'imageUrl': '###',
             'alt': 'produit1',
         }
@@ -65,7 +65,7 @@ let toappend;
         color.textContent=produit.color;
         price.textContent=(produit.prix)/100+'€';
         detail.textContent=produit.details;
-        id.textContent=produit.id;
+        id.textContent=produit._id;
         url.appendChild(image);
         body.appendChild(copy);
         
