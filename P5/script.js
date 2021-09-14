@@ -59,8 +59,9 @@ let toappend;
     
         image.setAttribute('alt',produit.alt);
         image.setAttribute('src',produit.imageUrl);
-        url.href=`produit?id=${produit._id}`;
-    
+        url.href=`produit/?id=${produit._id}`;
+        console.log(produit._id);
+
         name.textContent=produit.name;
         color.textContent=produit.color;
         price.textContent=(produit.prix)/100+'€';
