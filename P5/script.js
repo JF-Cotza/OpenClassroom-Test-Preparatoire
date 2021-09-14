@@ -37,7 +37,7 @@ if ("content" in document.createElement("template")) {
             'prix': 1920,
             'details': 'details: fs;bs,;bsf;benfeklevlznbvllvnv jbdkbfkjzbuiegz bfguigbezguug',
             '_id': '567',
-            'imageUrl': 'carre-mirror.png',
+            'imageUrl': 'carre-miroir.png',
             'alt': 'produit1',
         }
 ]
