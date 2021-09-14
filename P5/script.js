@@ -28,7 +28,7 @@ if ("content" in document.createElement("template")) {
         'prix': 2000,
         'details': 'details: lorerienfeklevlznbvllvnv jbdkbfkjzbuiegz bfguigbezguug',
         '_id':'1234',
-        'imageUrl':'./carre-2000-2000.png',
+        'imageUrl':'carre-2000-2000.png',
         'alt':'produit0'
     },
         {
@@ -37,7 +37,7 @@ if ("content" in document.createElement("template")) {
             'prix': 1920,
             'details': 'details: fs;bs,;bsf;benfeklevlznbvllvnv jbdkbfkjzbuiegz bfguigbezguug',
             '_id': '567',
-            'imageUrl': './carre-mirror.png',
+            'imageUrl': 'carre-mirror.png',
             'alt': 'produit1',
         }
 ]
