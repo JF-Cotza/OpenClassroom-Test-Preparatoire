@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <form action="">
+        name <input type="text" minlength="2" maxlength="30" name='name' required>
+        firstname <input type="text" minlength="1" maxlength="30" name='firstname' required>
+        mail <input type="email" name="mail" id="" required placeholder="exemple: nom.prénom@gmail.com"> 
+        
+        <fieldset>Adresse
+            N° <input type="text" name="numberAdress" id="" pattern='[a-zA-Z0-9 -]{0,10}' placeholder="7, 7bis, 7-7ter" maxlength="10">
+        </br>
+         <!--  complément <input type="text" name="complément" id="" placeholder="bis, ter" pattern='[a-z][A-Z]{0,10}' maxlength="10">
+        </br> -->
+            type de Voie <input type="text" name="typeVoie" id="" placeholder="rue, avenue, allée" pattern='[a-z][A-Z]{0,10}' maxlength="10">
+        </br>
+            voie <input type="text" name="nomVoie" id="" pattern='[a-zA-Z0-9 -]{0,50}'>
+        </br>
+            Bat <input type="text" name="bat" id="" pattern='[a-zA-Z0-9 ]{0,10}'>
+        </br>
+            Apt <input type="text" name="apt" id="" pattern="pattern='[a-zA-Z0-9 ]{0,10}'" placeholder="A 214">
+        </br>
+            Lieu dit <input type="text" name="" id="" pattern='[a-zA-Z0-9 ]{0,30}' maxlength="30">
+        </br>
+            Code Postal <input type="text" pattern='[0-9]{5}' size="5" maxlength="5" minlength="5">
+            <!-- pattern='[0-9]*' n'autorise que les chiffres sinon title = modifier la valeur mais il n'y a pas de longueur 
+                 pattern='[0-9]{5}' exige qu'il face 5 caractères pour que la valeur soit validée
+                 size détermine le 'nombre de caractères affichées pour l'input
+                 minlength affiche un message si l'on a moins de 5 caractères
+                 maxlength bloque la saisie lorsque l'on arrive à 5 caractère
+            -->
+        </br>
+            Ville <input type="text" name="" id="" pattern='[a-zA-Z0-9 ]{0,50}' placeholder="Paris 12">
+        </fieldset>
+        
+        
+    </form>
+    <p> structure de pattern / regex</p>
+    <ul>
+        <li>pattern='[0-9]*' n'autorise que les chiffres sinon title = modifier la valeur mais il n'y a pas de longueur</li>
+        <li>pattern='[0-9]{5}' exige qu'il fassee 5 caractères (numériques dans ce cas) pour que la
+        valeur soit validée</li>
+        <li>pattern='[a-z]{1,5}' dans ce cas ce sont entre 1 et 5 lettres minuscules</li>
+        <li>pattern='[A-Z]{5}' 5 lettres majuscules</li>
+        <li>pattern='[a-zA-Z]{1,5}' n'accepte que les lettres majuscules et minuscules</li>
+        <li>pattern='[a-zA-Z0-9]{1,5}' minuscules majuscules chiffres</li>
+        <li>pattern='[a-zA-Z0-9 ]{1,5}' on y ajoute les espaces</li>
+    </ul>
+</body>
+</html>
