@@ -39,16 +39,22 @@
             if(already!=0){
                 info.textContent='option déjà sélctionnée';
             }
-            else{
+            else{              
+                let label = document.createElement('label');
+                label.setAttribute('for','key_'+toto.value);
+                label.setAttribute('key',toto.value);
+                label.textContent=toto.options[toto.value].text;
+
                 let input = document.createElement('input');
                 input.setAttribute('type', 'number');
                 input.setAttribute('min', 0);
                 input.setAttribute('key', toto.value)
                 input.classList.add('qty');
                 input.name = 'value';
-                input.id = i;
+                input.id = 'key_'+toto.value;
                 input.value = 1;
-                i++;
+
+                create.appendChild(label);
                 create.appendChild(input);
             }
         }
@@ -60,9 +66,16 @@
             member.addEventListener('change',function(e){                
                 if(e.target.value==0){
                                         //console.log(qty.id);
+                                        let toSuppress=e.target.getAttribute('key');
                                         e.target.remove();
+                                        let labels = document.getElementsByTagName('label');
+                                        for (let lab of labels){
+                                            if(lab.getAttribute('key')==toSuppress){
+                                                lab.remove();
+                                            }
+                                        }
                                     }
-
+            
                 });
             }
         }
