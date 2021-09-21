@@ -54,9 +54,7 @@ let toappend;
         let id = select(copy, '.cardId')[0];
         let image =document.createElement('img');
         
-        
-        //`<img src="${produit.imageUrl}" alt="${produit.alt}" class='.cardImage'>`
-    
+
         image.setAttribute('alt',produit.alt);
         image.setAttribute('src',produit.imageUrl);
         url.href=`produit/?id=${produit._id}`;

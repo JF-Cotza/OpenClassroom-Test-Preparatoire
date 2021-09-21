@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://google.com">
+        choisissez
+        <select name="select" id="select"  >
+            
+            <option value="1">tata</option>
+            <option value="2" selected >tete</option>
+            <option value="3">titi</option>
+          
+        </select>
+    </form>
+
+    <script>
+        let select=document.getElementById('select');
+        let i=0;
+        console.log(select);
+        console.log(select.value);
+        select.addEventListener('change',function(){console.log('i: '+i+' value: '+select.value);i++; })
+    </script>
+        
+</body>
+</html>

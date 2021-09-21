@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="toto" id="toto">
+        <option value="0">tata</option>
+        <option value="1">tete</option>
+        <option value="2">titi</option>
+    </select>
+
+    <div class="create"></div>
+    <div id="info"></div>
+
+
+<script>
+    const getId=($id)=>{return document.getElementById($id);}
+    const getClass=($class)=>{return document.getElementsByClassName($class);}
+    
+    let toto=getId('toto');
+    let create=getClass('create')[0];
+    let info=getId('info');
+    let i=0;
+
+    toto.addEventListener('change',()=>{
+        //console.log(toto.value);
+        let qty = getClass('qty');
+        let already=0;
+        if(qty){
+            for(let member of qty){
+                if(member.getAttribute('key')==toto.value){
+                    already++
+                }
+            }
+            if(already!=0){
+                info.textContent='option déjà sélctionnée';
+            }
+            else{
+                let input = document.createElement('input');
+                input.setAttribute('type', 'number');
+                input.setAttribute('min', 0);
+                input.setAttribute('key', toto.value)
+                input.classList.add('qty');
+                input.name = 'value';
+                input.id = i;
+                input.value = 1;
+                i++;
+                create.appendChild(input);
+            }
+        }
+        
+        let valeur = getId('value');
+        
+        if(qty){
+            for(let member of qty){
+            member.addEventListener('change',function(e){                
+                if(e.target.value==0){
+                                        //console.log(qty.id);
+                                        e.target.remove();
+                                    }
+
+                });
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>
