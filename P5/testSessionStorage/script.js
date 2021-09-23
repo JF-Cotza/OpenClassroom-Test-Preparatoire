@@ -26,8 +26,8 @@ if(toLocal || toSession || toCookie){
         sessionStorage.setItem('session', 'valeur pour la session');
     })
     toCookie.addEventListener('click',function () {
-        document.cookie ='cookie=cookie; path=file://D:/Documents/OpenClassroom-Livrables/Test_preparatoire_projet/P5/testSessionStorage/';
-        document.cookie ='cooking=cook; path=file://D:/Documents/OpenClassroom-Livrables/Test_preparatoire_projet/P5/testSessionStorage/';
+        document.cookie ='cookie=cookie; path=/';
+        document.cookie ='cooking=cook; path=/';
     })
 
 }
