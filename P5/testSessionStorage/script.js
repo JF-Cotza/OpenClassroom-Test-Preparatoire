@@ -64,8 +64,8 @@ if (fromLocal ||fromSession) {
     viderStockage.addEventListener('click',function () {
         localStorage.clear();
         sessionStorage.clear();
-        browser.cookies.remove('cookie');
-        browser.cookies.remove('cooking');
+        browser.cookie.remove('cookie');
+        browser.cookie.remove('cooking');
     })
 
 }
