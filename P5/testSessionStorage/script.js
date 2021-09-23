@@ -64,7 +64,7 @@ if (fromLocal ||fromSession) {
     viderStockage.addEventListener('click',function () {
         localStorage.clear();
         sessionStorage.clear();
-        cookies.remove('cookie');
+        document.cookie=('cookie= ; path=/');
         cookies.remove('cooking');
     })
 
