@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    <input type="text" name="tata" id="tata">
+    <input type="text" name="toto" id="toto">
+    <input type="text" name="tutu" id="tutu">
+
+    <button id='send'>vers local storage</button>
+    <button id='get'>récupération des datas</button>
+    <button id='modify'>modifier les données</button>
+    <button id='suppr'>supprimer les données</button>
+    <p id='infos'></p>
+
+    <script>
+        const getID=($id)=>{return document.getElementById($id);};
+        const storage=($key,$value)=>{return localStorage.setItem($key,JSON.stringify($value))};
+        const getDatas=($key)=>{return JSON.parse(localStorage.getItem($key))};
+        
+        const updateDatas=($key,$value)=>{
+            getDatas($key);
+            localStorage.removeItem($key);
+            storage($key, $value);
+            }
+
+        let input = document.getElementsByTagName('input');
+        let send=getID('send');
+        let get=getID('get');
+        let modify=getID('modify');
+        let infos=getID('infos');
+        let suppr=getID('suppr');
+
+        let toStorage=[];
+
+        send.addEventListener('click',function(){
+            for(let option of input){
+                let inputDatas = { 'name': '', 'value': '' };
+                if (option.value!=''){
+                    inputDatas.name=option.name;
+                    inputDatas.value=option.value;
+                    toStorage.push(inputDatas);
+                }
+            }
+            storage('2',toStorage);
+        })
+
+        let show= getDatas('1');
+        get.addEventListener('click',function(){
+            let write='';
+            for(let i=0; i<show.length;i++){
+            write+=`name= ${show[i].name} / valeur=${show[i].value} ////`}
+            infos.textContent=write;
+        })
+
+        suppr.addEventListener('click',function(){
+            localStorage.clear();
+        })
+
+        modify.addEventListener('click',function(){
+            for (let option of input) {
+                let inputDatas = { 'name': '', 'value': '' };
+                if (option.value != '') {
+                    inputDatas.name = option.name;
+                    inputDatas.value = option.value;
+                    toStorage.push(inputDatas);
+                }
+            }
+            updateDatas('1', toStorage);
+        })
+
+    </script>
+
+</body>
+</html>

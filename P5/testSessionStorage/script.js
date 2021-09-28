@@ -72,3 +72,4 @@ if (fromLocal ||fromSession) {
 else {
     console.log("page d'envoi 2");
 }
+
